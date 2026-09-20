@@ -18,6 +18,7 @@
 
   --color-cyan: #0d827f;
   --color-cyan-light: #66d2cf;
+  --color-cyan-on-dark: #109996;
   --color-cyan-pressed: #0a6461;
   --color-disabled: #e2dedb;
 
@@ -75,7 +76,25 @@
   }
 
   :focus-visible {
-    @apply outline-cyan outline-2 outline-offset-2 outline-solid;
+    @apply v-focus-ring;
+  }
+}
+
+@utility v-focus-ring {
+  @apply outline-cyan outline-2 outline-offset-2 outline-solid;
+}
+
+@utility v-bleed-container {
+  padding-inline: 1.5rem;
+
+  @variant md {
+    padding-inline: 2.46875rem;
+  }
+
+  @variant lg {
+    width: min(100% - 10rem, 80rem);
+    margin-inline: auto;
+    padding-inline: 5.3125rem;
   }
 }
 
@@ -103,8 +122,14 @@
 @utility v-btn {
   @apply bg-cyan text-cream font-display text-btn rounded-btn inline-flex h-14 items-center justify-center px-7.75 transition-[color,background-color];
 
-  @variant hover {
-    @apply bg-cyan-light text-ink;
+  &:not(:disabled, [aria-disabled="true"]) {
+    @variant hover {
+      @apply bg-cyan-light text-ink;
+    }
+  }
+
+  &:is(:disabled, [aria-disabled="true"]) {
+    @apply bg-disabled;
   }
 }
 
@@ -121,6 +146,30 @@
   top: 0.90625rem;
   left: 0.96875rem;
   width: calc(100% + 5.9375rem);
+}
+
+@utility v-option {
+  @apply bg-sand text-ink rounded-card block cursor-pointer px-6.25 py-6 transition-[background-color,color];
+
+  &:hover {
+    @apply bg-peach;
+  }
+
+  &:has(:checked) {
+    @apply bg-cyan text-cream;
+  }
+
+  &:has(:focus-visible) {
+    @apply v-focus-ring;
+  }
+
+  @variant md {
+    @apply h-62.5 py-8;
+  }
+
+  @variant xl {
+    @apply px-7;
+  }
 }
 
 @utility v-watermark {

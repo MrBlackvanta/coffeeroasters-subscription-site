@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/metadata";
+import { Hero, HowItWorks, PlanBuilder } from "@/views/plan";
 
 export const metadata = pageMetadata({
   title: "Create your plan",
@@ -9,5 +10,11 @@ export const metadata = pageMetadata({
 });
 
 export default function Plan() {
-  return null;
+  return (
+    <>
+      <Hero />
+      <HowItWorks />
+      <PlanBuilder />
+    </>
+  );
 }

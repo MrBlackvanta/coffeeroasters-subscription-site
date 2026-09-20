@@ -1,6 +1,7 @@
 "use client";
 
 import { CloseIcon, Logo, MenuIcon } from "@/components/icons";
+import holdPageBehind from "@/lib/hold-page-behind";
 import { type RefObject, useEffect, useRef, useState } from "react";
 
 import NavLinks from "./nav-links";
@@ -12,21 +13,6 @@ function focusOnceVisible(ref: RefObject<HTMLElement | null>) {
     frame = requestAnimationFrame(() => ref.current?.focus());
   });
   return () => cancelAnimationFrame(frame);
-}
-
-function holdPageBehind() {
-  const offset = window.scrollY;
-  const { style } = document.body;
-  style.position = "fixed";
-  style.insetInline = "0";
-  style.top = `${-offset}px`;
-
-  return () => {
-    style.position = "";
-    style.insetInline = "";
-    style.top = "";
-    window.scrollTo({ top: offset, behavior: "instant" });
-  };
 }
 
 export default function MobileMenu({ className = "" }: { className?: string }) {
