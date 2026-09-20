@@ -4,7 +4,6 @@ import {
   Logo,
   TwitterIcon,
 } from "@/components/icons";
-import { type Route } from "@/data";
 
 import NavLinks from "./nav-links";
 import Signature from "./signature";
@@ -19,14 +18,13 @@ const socials = [
   },
 ];
 
-export default function SiteFooter({ current }: { current: Route }) {
+export default function SiteFooter() {
   return (
     <footer className="v-container bg-slate relative mb-18 flex flex-col items-center px-6 py-13.5 md:px-14.5 lg:mb-22 lg:flex-row lg:px-21.25 lg:py-11.75">
       <Logo className="h-auto w-54.5 text-white md:w-59" />
 
       <NavLinks
         variant="footer"
-        current={current}
         className="mt-12 md:mt-8 lg:mt-0 lg:ml-25.75"
       />
 

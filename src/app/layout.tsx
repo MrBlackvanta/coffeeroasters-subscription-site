@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/app/site";
+import { SiteFooter, SiteHeader } from "@/components/layout";
 import { pageMetadata, siteName } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
 import { Barlow } from "next/font/google";
@@ -51,7 +52,17 @@ export default function RootLayout({
       lang="en"
       className={`${barlow.variable} ${fraunces.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col">{children}</body>
+      <body className="flex min-h-dvh flex-col">
+        <a href="#main" className="v-skip-link">
+          Skip to content
+        </a>
+
+        <SiteHeader />
+        <main id="main" className="grow pb-30 md:pb-36 lg:pb-50">
+          {children}
+        </main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

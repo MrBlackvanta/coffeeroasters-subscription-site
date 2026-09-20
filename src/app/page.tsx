@@ -1,5 +1,12 @@
-import { SiteShell } from "@/components/layout";
+import { Collection, Hero, HowItWorks, WhyUs } from "@/views/home";
 
 export default function Home() {
-  return <SiteShell current="/" />;
+  return (
+    <>
+      <Hero />
+      <Collection />
+      <WhyUs />
+      <HowItWorks />
+    </>
+  );
 }

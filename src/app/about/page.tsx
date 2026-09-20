@@ -1,4 +1,3 @@
-import { SiteShell } from "@/components/layout";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -10,5 +9,5 @@ export const metadata = pageMetadata({
 });
 
 export default function About() {
-  return <SiteShell current="/about" />;
+  return null;
 }

@@ -23,8 +23,10 @@
 
   --text-hero: 4.5rem;
   --text-hero--line-height: 4.5rem;
-  --text-hero-sm: 3rem;
-  --text-hero-sm--line-height: 3rem;
+  --text-hero-md: 3rem;
+  --text-hero-md--line-height: 3rem;
+  --text-hero-sm: 2.5rem;
+  --text-hero-sm--line-height: 2.5rem;
 
   --text-h2: 2.5rem;
   --text-h2--line-height: 3rem;
@@ -83,5 +85,73 @@
 
   @variant lg {
     width: min(100% - 10rem, 80rem);
+  }
+}
+
+@utility v-skip-link {
+  @apply sr-only;
+
+  @variant focus-visible {
+    @apply bg-cyan text-cream text-body not-sr-only fixed top-4 left-4 z-60 rounded-md px-6 py-3 font-bold;
+  }
+}
+
+@utility v-btn {
+  @apply bg-cyan text-cream font-display text-btn rounded-btn inline-flex h-14 items-center justify-center px-7.75 transition-[color,background-color];
+
+  @variant hover {
+    @apply bg-cyan-light text-ink;
+  }
+}
+
+@utility v-step-number {
+  @apply font-display text-hero text-peach;
+
+  &::before {
+    content: attr(data-step);
+  }
+}
+
+@utility v-step-rail {
+  @apply bg-peach absolute h-0.5;
+  top: 0.90625rem;
+  left: 0.96875rem;
+  width: calc(100% + 5.9375rem);
+}
+
+@utility v-watermark {
+  @apply text-grey pointer-events-none absolute inset-x-0 top-0 h-18 select-none;
+
+  &::before {
+    content: attr(data-label);
+    @apply font-display block text-center leading-18 lowercase;
+    font-size: 2.5rem;
+  }
+
+  &::after {
+    content: "";
+    @apply from-cream/0 to-cream absolute inset-0 bg-linear-to-b/srgb;
+  }
+
+  @variant md {
+    @apply text-grey/50 h-29.5;
+
+    &::before {
+      @apply mt-6.75;
+      font-size: 6rem;
+    }
+
+    &::after {
+      @apply to-cream/50;
+    }
+  }
+
+  @variant lg {
+    @apply h-49;
+
+    &::before {
+      @apply mt-21.5;
+      font-size: 9.375rem;
+    }
   }
 }

@@ -1,11 +1,10 @@
 import { Logo } from "@/components/icons";
-import { type Route } from "@/data";
 import Link from "next/link";
 
 import MobileMenu from "./mobile-menu";
 import NavLinks from "./nav-links";
 
-export default function SiteHeader({ current }: { current: Route }) {
+export default function SiteHeader() {
   return (
     <header className="v-container flex items-center justify-between pt-8 pb-10 md:pt-10 md:pb-13 lg:pt-11 lg:pb-10.5">
       <Link href="/" aria-label="coffeeroasters home" className="block">
@@ -13,10 +12,10 @@ export default function SiteHeader({ current }: { current: Route }) {
       </Link>
 
       <nav aria-label="Main" className="hidden md:block">
-        <NavLinks variant="header" current={current} />
+        <NavLinks variant="header" />
       </nav>
 
-      <MobileMenu current={current} className="md:hidden" />
+      <MobileMenu className="md:hidden" />
     </header>
   );
 }

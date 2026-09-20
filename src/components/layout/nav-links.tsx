@@ -1,7 +1,12 @@
-import { navLinks, type Route } from "@/data";
+"use client";
+
+import { navLinks } from "@/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export type NavVariant = "header" | "footer" | "drawer";
+
+const withoutTrailingSlash = (path: string) => path.replace(/\/+$/, "") || "/";
 
 const lists: Record<NavVariant, string> = {
   header: "flex items-center gap-8",
@@ -20,17 +25,17 @@ const items: Record<NavVariant, string> = {
 
 type NavLinksProps = {
   variant: NavVariant;
-  current: Route;
   className?: string;
   onNavigate?: () => void;
 };
 
 export default function NavLinks({
   variant,
-  current,
   className = "",
   onNavigate,
 }: NavLinksProps) {
+  const current = withoutTrailingSlash(usePathname());
+
   return (
     <ul className={`${lists[variant]} ${className}`}>
       {navLinks.map(({ href, label }) => (

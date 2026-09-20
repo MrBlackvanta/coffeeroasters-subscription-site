@@ -1,7 +1,6 @@
 "use client";
 
 import { CloseIcon, Logo, MenuIcon } from "@/components/icons";
-import { type Route } from "@/data";
 import { type RefObject, useEffect, useRef, useState } from "react";
 
 import NavLinks from "./nav-links";
@@ -30,15 +29,7 @@ function holdPageBehind() {
   };
 }
 
-type MobileMenuProps = {
-  current: Route;
-  className?: string;
-};
-
-export default function MobileMenu({
-  current,
-  className = "",
-}: MobileMenuProps) {
+export default function MobileMenu({ className = "" }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const panel = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -126,7 +117,6 @@ export default function MobileMenu({
 
         <NavLinks
           variant="drawer"
-          current={current}
           onNavigate={() => setOpen(false)}
           className="mt-20"
         />
