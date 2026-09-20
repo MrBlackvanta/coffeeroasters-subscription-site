@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@source not "../../*.md";
+
+@theme {
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --color-cream: #fefcf7;
+  --color-ink: #333d4b;
+  --color-ink-muted: #83888f;
+  --color-cyan: #0e8784;
+  --color-peach: #fdd6ba;
+  --color-slate: #2c343e;
+}
+
+@layer base {
+  html {
+    @apply bg-cream text-ink font-sans;
+    color-scheme: light;
+  }
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}

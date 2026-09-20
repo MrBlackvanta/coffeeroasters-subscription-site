@@ -1,0 +1,13 @@
+export { default as AustraliaIcon } from "./AustraliaIcon";
+export { default as CanadaIcon } from "./CanadaIcon";
+export { default as ChevronDownIcon } from "./ChevronDownIcon";
+export { default as CloseIcon } from "./CloseIcon";
+export { default as CoffeeBeanIcon } from "./CoffeeBeanIcon";
+export { default as FacebookIcon } from "./FacebookIcon";
+export { default as GiftIcon } from "./GiftIcon";
+export { default as InstagramIcon } from "./InstagramIcon";
+export { default as Logo } from "./Logo";
+export { default as MenuIcon } from "./MenuIcon";
+export { default as TruckIcon } from "./TruckIcon";
+export { default as TwitterIcon } from "./TwitterIcon";
+export { default as UnitedKingdomIcon } from "./UnitedKingdomIcon";
