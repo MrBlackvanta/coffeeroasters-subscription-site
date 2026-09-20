@@ -6,11 +6,55 @@
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 
   --color-cream: #fefcf7;
-  --color-ink: #333d4b;
-  --color-ink-muted: #83888f;
-  --color-cyan: #0e8784;
+  --color-sand: #f4f1eb;
   --color-peach: #fdd6ba;
-  --color-slate: #2c343e;
+  --color-slate: #293039;
+  --color-slate-raised: #2e3743;
+
+  --color-ink: #333d4b;
+  --color-grey: #83888f;
+  --color-grey-on-light: #70757c;
+  --color-grey-on-dark: #979ca3;
+
+  --color-cyan: #0d827f;
+  --color-cyan-hover: #66d2cf;
+  --color-cyan-pressed: #0a6461;
+  --color-disabled: #e2dedb;
+
+  --text-hero: 4.5rem;
+  --text-hero--line-height: 4.5rem;
+  --text-hero-sm: 3rem;
+  --text-hero-sm--line-height: 3rem;
+
+  --text-h2: 2.5rem;
+  --text-h2--line-height: 3rem;
+  --text-h2-sm: 1.75rem;
+  --text-h2-sm--line-height: 2rem;
+
+  --text-h3: 2rem;
+  --text-h3--line-height: 2.25rem;
+  --text-h4: 1.5rem;
+  --text-h4--line-height: 2rem;
+
+  --text-btn: 1.125rem;
+  --text-btn--line-height: 1.5625rem;
+
+  --text-body: 1rem;
+  --text-body--line-height: 1.625rem;
+  --text-body-sm: 0.9375rem;
+  --text-body-sm--line-height: 1.5625rem;
+
+  --text-nav: 0.75rem;
+  --text-nav--line-height: 0.9375rem;
+  --text-nav--letter-spacing: 0.0769em;
+  --text-nav--font-weight: 700;
+
+  --radius-btn: 0.375rem;
+  --radius-card: 0.5rem;
+  --radius-media: 0.625rem;
+
+  --container-page: 80rem;
+  --container-content: 69.375rem;
 }
 
 @layer base {
