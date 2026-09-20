@@ -58,7 +58,7 @@ export default function RootLayout({
         </a>
 
         <SiteHeader />
-        <main id="main" className="grow pb-30 md:pb-36 lg:pb-50">
+        <main id="main" className="grow">
           {children}
         </main>
         <SiteFooter />

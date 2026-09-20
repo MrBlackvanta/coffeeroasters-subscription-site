@@ -2,7 +2,7 @@ import { coffees, collectionHeading } from "@/data";
 
 export default function Collection() {
   return (
-    <section className="relative mt-30 pt-21.25 md:mt-36 md:pt-14.75 lg:mt-34 lg:pt-31.5">
+    <section className="relative isolate mt-30 pt-21.25 md:mt-36 md:pt-14.75 lg:mt-34 lg:pt-31.5">
       <h2 className="sr-only">{collectionHeading}</h2>
       <span
         aria-hidden="true"

@@ -70,6 +70,10 @@
     @apply cursor-pointer;
   }
 
+  source {
+    display: none;
+  }
+
   :focus-visible {
     @apply outline-cyan outline-2 outline-offset-2 outline-solid;
   }
@@ -120,7 +124,7 @@
 }
 
 @utility v-watermark {
-  @apply text-grey pointer-events-none absolute inset-x-0 top-0 h-18 select-none;
+  @apply text-grey pointer-events-none absolute inset-x-0 top-0 -z-10 h-18 select-none;
 
   &::before {
     content: attr(data-label);
@@ -134,15 +138,11 @@
   }
 
   @variant md {
-    @apply text-grey/50 h-29.5;
+    @apply h-29.5 opacity-50;
 
     &::before {
       @apply mt-6.75;
       font-size: 6rem;
-    }
-
-    &::after {
-      @apply to-cream/50;
     }
   }
 

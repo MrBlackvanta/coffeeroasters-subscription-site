@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/metadata";
+import { Commitment, Headquarters, Hero, Quality } from "@/views/about";
 
 export const metadata = pageMetadata({
   title: "About us",
@@ -9,5 +10,12 @@ export const metadata = pageMetadata({
 });
 
 export default function About() {
-  return null;
+  return (
+    <>
+      <Hero />
+      <Commitment />
+      <Quality />
+      <Headquarters />
+    </>
+  );
 }

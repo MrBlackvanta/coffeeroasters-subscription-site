@@ -10,25 +10,25 @@ export const coffees = [
   {
     name: "Gran Espresso",
     description:
-      "Light and flavorful blend with cocoa and black pepper for an intense experience",
+      "Light and flavorful blend with cocoa and black pepper for an intense experience.",
     image: granEspresso,
   },
   {
     name: "Planalto",
     description:
-      "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts",
+      "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.",
     image: planalto,
   },
   {
     name: "Piccollo",
     description:
-      "Mild and smooth blend featuring notes of toasted almond and dried cherry",
+      "Mild and smooth blend featuring notes of toasted almond and dried cherry.",
     image: piccollo,
   },
   {
     name: "Danche",
     description:
-      "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
+      "Ethiopian hand-harvested blend densely packed with vibrant fruit notes.",
     image: danche,
   },
 ];

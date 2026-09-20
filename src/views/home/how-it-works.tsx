@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HowItWorks() {
   return (
-    <section className="v-container mt-30 md:mt-36 lg:mt-50 lg:px-21.25">
+    <section className="v-container mt-30 pb-30 md:mt-36 md:pb-36 lg:mt-50 lg:px-21.25 lg:pb-50">
       <h2 className="font-display text-h4 text-grey text-center md:text-left">
         How it works
       </h2>
