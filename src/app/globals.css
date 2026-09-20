@@ -17,7 +17,7 @@
   --color-grey-on-dark: #979ca3;
 
   --color-cyan: #0d827f;
-  --color-cyan-hover: #66d2cf;
+  --color-cyan-light: #66d2cf;
   --color-cyan-pressed: #0a6461;
   --color-disabled: #e2dedb;
 
@@ -61,9 +61,27 @@
   html {
     @apply bg-cream text-ink font-sans;
     color-scheme: light;
+    overflow-y: scroll;
   }
 
   button:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    @apply outline-cyan outline-2 outline-offset-2 outline-solid;
+  }
+}
+
+@utility v-container {
+  width: min(100% - 3rem, 80rem);
+  margin-inline: auto;
+
+  @variant md {
+    width: min(100% - 4.9375rem, 80rem);
+  }
+
+  @variant lg {
+    width: min(100% - 10rem, 80rem);
   }
 }

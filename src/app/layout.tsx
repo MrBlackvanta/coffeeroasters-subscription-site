@@ -1,7 +1,8 @@
 import { SITE_URL } from "@/app/site";
 import { pageMetadata, siteName } from "@/lib/metadata";
 import type { Metadata, Viewport } from "next";
-import { Barlow, Fraunces } from "next/font/google";
+import { Barlow } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -11,11 +12,13 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const fraunces = localFont({
+  src: "../assets/fonts/fraunces-9pt-black-latin.woff2",
   variable: "--font-fraunces",
   weight: "900",
-  subsets: ["latin"],
+  style: "normal",
   display: "swap",
+  adjustFontFallback: "Times New Roman",
 });
 
 const homeTitle = `${siteName} | Fresh coffee, delivered`;
