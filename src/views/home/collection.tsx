@@ -22,7 +22,7 @@ export default function Collection() {
               height={image.height}
               alt=""
               loading="lazy"
-              className="h-37.75 w-auto justify-self-center md:h-48.25"
+              className="max-h-37.75 w-fit justify-self-center md:max-h-48.25"
             />
 
             <div className="max-w-70.5 md:mt-7.5 md:max-w-none lg:mt-0">
