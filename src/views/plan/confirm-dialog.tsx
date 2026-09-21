@@ -37,7 +37,7 @@ export default function ConfirmDialog({
       onClick={(event) => {
         if (event.target === event.currentTarget) event.currentTarget.close();
       }}
-      className="bg-cream text-ink rounded-card m-auto w-[calc(100%-3rem)] max-w-81.75 overflow-hidden backdrop:bg-black/50 md:max-w-135"
+      className="v-dialog w-[calc(100%-3rem)] max-w-81.75 md:max-w-135"
     >
       <div className="bg-ink relative isolate h-22 px-6 pt-7 md:h-34 md:px-14 md:pt-12">
         <img
@@ -80,7 +80,9 @@ export default function ConfirmDialog({
               className="v-btn w-full md:w-54.25"
             >
               {confirmation.action}
-              <span className="md:hidden">&nbsp;- {price}</span>
+              <span className="whitespace-nowrap md:hidden">
+                &nbsp;- {price}
+              </span>
             </button>
           </form>
         </div>

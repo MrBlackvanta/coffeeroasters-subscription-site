@@ -3,7 +3,7 @@
 import Toast from "@/components/toast";
 import { type PlanStepId, confirmation } from "@/data";
 import holdPageBehind from "@/lib/hold-page-behind";
-import { type PlanSelection, derivePlan } from "@/lib/plan";
+import { type PlanSelection, derivePlan, nextStepAfter } from "@/lib/plan";
 import { useRef, useState } from "react";
 
 import ConfirmDialog, { checkoutValue } from "./confirm-dialog";
@@ -25,9 +25,13 @@ export default function PlanBuilder() {
   const { steps, chosen, grindDisabled, firstUnanswered, monthlyPrice } =
     derivePlan(selection);
 
-  function revealStep(step: PlanStepId) {
+  function openStep(step: PlanStepId) {
     setOpenSteps((open) => (open.includes(step) ? open : [...open, step]));
     setActiveStep(step);
+  }
+
+  function revealStep(step: PlanStepId) {
+    openStep(step);
     document.getElementById(triggerId(step))?.focus();
   }
 
@@ -39,8 +43,10 @@ export default function PlanBuilder() {
   }
 
   function chooseOption(step: PlanStepId, optionId: string) {
-    setSelection((current) => ({ ...current, [step]: optionId }));
-    setActiveStep(step);
+    const next = { ...selection, [step]: optionId };
+
+    setSelection(next);
+    openStep(nextStepAfter(step, next) ?? step);
   }
 
   function submit() {

@@ -66,3 +66,12 @@ export function derivePlan(selection: PlanSelection): Plan {
       : 0,
   };
 }
+
+export function nextStepAfter(step: PlanStepId, selection: PlanSelection) {
+  const { grindDisabled } = derivePlan(selection);
+  const following = planSteps.slice(
+    planSteps.findIndex(({ id }) => id === step) + 1,
+  );
+
+  return following.find(({ id }) => !(grindDisabled && id === "grind"))?.id;
+}

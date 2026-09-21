@@ -42,8 +42,8 @@ export default function Question({
         </button>
       </h3>
 
-      <div id={panelId} hidden={!open} className="mt-8 md:mt-10 xl:mt-14">
-        <fieldset>
+      <div id={panelId} data-open={open || undefined} className="v-collapse">
+        <fieldset className="pt-8 md:pt-10 xl:pt-14">
           <legend className="sr-only">{step.question}</legend>
 
           <div className="grid gap-y-4 md:grid-cols-3 md:gap-x-2.5 md:gap-y-0 xl:gap-x-5.75">
