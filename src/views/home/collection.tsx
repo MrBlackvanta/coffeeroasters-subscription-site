@@ -10,11 +10,11 @@ export default function Collection() {
         className="v-watermark"
       />
 
-      <ul className="v-container grid gap-y-12 md:gap-y-8 md:px-14.5 lg:grid-cols-4 lg:gap-x-7.5 lg:px-21.25">
+      <ul className="v-container lg:max-w-content grid gap-y-12 md:gap-y-8 md:px-14.5 lg:grid-cols-4 lg:gap-x-7.5 lg:px-0">
         {coffees.map(({ name, description, image }) => (
           <li
             key={name}
-            className="grid justify-items-center gap-y-6 text-center md:grid-cols-[15.9375rem_1fr] md:justify-items-stretch md:gap-x-9 md:gap-y-0 md:text-left lg:grid-cols-1 lg:justify-items-center lg:gap-y-18 lg:text-center"
+            className="grid justify-items-center gap-y-6 text-center md:grid-cols-[15.9375rem_1fr] md:justify-items-stretch md:gap-x-9 md:gap-y-0 md:text-left lg:grid-cols-1 lg:content-start lg:justify-items-center lg:gap-y-18 lg:text-center"
           >
             <img
               src={image.src}

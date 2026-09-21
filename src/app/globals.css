@@ -275,7 +275,7 @@
 
     &::before {
       @apply mt-21.5;
-      font-size: 9.375rem;
+      font-size: min(9.375rem, 10.5vw);
     }
   }
 }
