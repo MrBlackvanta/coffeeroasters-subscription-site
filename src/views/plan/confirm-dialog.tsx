@@ -5,6 +5,8 @@ import { type RefObject, useEffect } from "react";
 
 import PlanSentence from "./plan-sentence";
 
+export const checkoutValue = "checkout";
+
 type Props = {
   ref: RefObject<HTMLDialogElement | null>;
   chosen: Plan["chosen"];
@@ -72,7 +74,11 @@ export default function ConfirmDialog({
           <p className="font-display text-h3 hidden md:block">{price}</p>
 
           <form method="dialog">
-            <button type="submit" className="v-btn w-full md:w-54.25">
+            <button
+              type="submit"
+              value={checkoutValue}
+              className="v-btn w-full md:w-54.25"
+            >
               {confirmation.action}
               <span className="md:hidden">&nbsp;- {price}</span>
             </button>

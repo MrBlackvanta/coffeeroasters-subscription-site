@@ -5,7 +5,7 @@ import StepList from "@/components/step-list";
 
 export default function HowItWorks() {
   return (
-    <section className="v-bleed-container bg-slate rounded-media text-cream relative isolate mt-30 overflow-hidden pt-20 pb-20 md:mt-36 md:py-24.25 lg:mt-42 lg:pt-25 lg:pb-25">
+    <section className="v-bleed-container bg-slate rounded-media text-cream relative isolate mt-30 overflow-hidden pt-20 pb-20 md:mt-36 md:py-24.25 lg:mt-44.25 lg:pt-22.75 lg:pb-27.25">
       <picture className="contents">
         <source
           media="(min-width: 64rem)"

@@ -168,4 +168,5 @@ export const confirmation = {
   heading: "Order Summary",
   body: "Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.",
   action: "Checkout",
+  success: "Thanks! Your plan is confirmed and your coffee is on its way.",
 };

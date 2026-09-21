@@ -1,11 +1,12 @@
 "use client";
 
-import type { PlanStepId } from "@/data";
+import Toast from "@/components/toast";
+import { type PlanStepId, confirmation } from "@/data";
 import holdPageBehind from "@/lib/hold-page-behind";
 import { type PlanSelection, derivePlan } from "@/lib/plan";
 import { useRef, useState } from "react";
 
-import ConfirmDialog from "./confirm-dialog";
+import ConfirmDialog, { checkoutValue } from "./confirm-dialog";
 import OrderSummary from "./order-summary";
 import Question from "./question";
 import StepNav from "./step-nav";
@@ -17,6 +18,7 @@ export default function PlanBuilder() {
   const [selection, setSelection] = useState<PlanSelection>({});
   const [openSteps, setOpenSteps] = useState<PlanStepId[]>(["drink"]);
   const [activeStep, setActiveStep] = useState<PlanStepId>("drink");
+  const [confirmed, setConfirmed] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const releasePage = useRef<(() => void) | null>(null);
 
@@ -43,17 +45,23 @@ export default function PlanBuilder() {
 
   function submit() {
     if (firstUnanswered) return revealStep(firstUnanswered);
+
+    const node = dialog.current;
+    if (!node) return;
+
+    node.returnValue = "";
     releasePage.current = holdPageBehind();
-    dialog.current?.showModal();
+    node.showModal();
   }
 
-  function releaseOnClose() {
+  function handleDialogClose() {
     releasePage.current?.();
     releasePage.current = null;
+    setConfirmed(dialog.current?.returnValue === checkoutValue);
   }
 
   return (
-    <section className="v-container mt-30 pb-30 md:mt-36 md:pb-36 lg:mt-42 lg:px-21.25 lg:pb-42 xl:px-0">
+    <section className="v-container mt-30 pb-30 md:mt-36 md:pb-36 lg:mt-39.75 lg:px-21.25 lg:pb-42 xl:px-0">
       <h2 className="sr-only">Build your plan</h2>
 
       <div className="xl:max-w-content xl:mx-auto xl:grid xl:grid-cols-[auto_1fr] xl:items-start xl:gap-x-31.25">
@@ -99,7 +107,12 @@ export default function PlanBuilder() {
         chosen={chosen}
         grindDisabled={grindDisabled}
         monthlyPrice={monthlyPrice}
-        onClose={releaseOnClose}
+        onClose={handleDialogClose}
+      />
+
+      <Toast
+        message={confirmed ? confirmation.success : null}
+        onDismiss={() => setConfirmed(false)}
       />
     </section>
   );

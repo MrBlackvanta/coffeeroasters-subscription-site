@@ -58,7 +58,7 @@ export default function Question({
                   className="sr-only"
                 />
 
-                <span className="font-display text-h4 block">
+                <span className="font-display text-h4 block whitespace-nowrap">
                   {option.name}
                 </span>
 

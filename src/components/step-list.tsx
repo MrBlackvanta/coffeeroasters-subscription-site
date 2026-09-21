@@ -5,6 +5,17 @@ const discFill = {
   dark: "bg-transparent",
 };
 
+const keepHyphenatedWordsWhole = (text: string) =>
+  text.split(/(\S+-\S+)/).map((part, index) =>
+    index % 2 ? (
+      <span key={part} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+
 export default function StepList({ tone }: { tone: keyof typeof discFill }) {
   return (
     <ol className="grid gap-y-14 md:grid-cols-3 md:gap-x-2.5 md:gap-y-0 lg:max-w-261.25 lg:gap-x-23.75">
@@ -29,8 +40,8 @@ export default function StepList({ tone }: { tone: keyof typeof discFill }) {
             {title}
           </h3>
 
-          <p className="text-body-sm lg:text-body mt-6 whitespace-pre-line md:mt-9.75 lg:mt-10.75">
-            {description}
+          <p className="text-body-sm lg:text-body mt-6 md:mt-9.75 lg:mt-10.75">
+            {keepHyphenatedWordsWhole(description)}
           </p>
         </li>
       ))}

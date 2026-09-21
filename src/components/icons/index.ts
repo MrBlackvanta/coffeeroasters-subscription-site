@@ -1,5 +1,6 @@
 export { default as AustraliaIcon } from "./australia-icon";
 export { default as CanadaIcon } from "./canada-icon";
+export { default as CheckIcon } from "./check-icon";
 export { default as ChevronDownIcon } from "./chevron-down-icon";
 export { default as CloseIcon } from "./close-icon";
 export { default as CoffeeBeanIcon } from "./coffee-bean-icon";

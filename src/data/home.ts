@@ -68,6 +68,6 @@ export const steps = [
   {
     title: "Receive and enjoy!",
     description:
-      "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning\nworld-class coffees curated to provide a distinct tasting experience.",
+      "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },
 ];
