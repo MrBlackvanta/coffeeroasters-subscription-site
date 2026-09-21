@@ -5,7 +5,7 @@ import { commitment } from "@/data";
 
 export default function Commitment() {
   return (
-    <section className="v-container mt-30 md:mt-36 lg:mt-42 lg:px-21.25">
+    <section className="v-container lg:max-w-content mt-30 md:mt-36 lg:mt-42">
       <div className="md:grid md:grid-cols-[17.5625rem_1fr] md:items-start md:gap-x-17.25 lg:grid-cols-[445fr_540fr] lg:items-center lg:gap-x-31.25">
         <picture className="contents">
           <source
@@ -26,7 +26,7 @@ export default function Commitment() {
             height={commitmentMobile.height}
             alt=""
             loading="lazy"
-            className="rounded-card h-100 w-full object-cover md:h-117.5 lg:h-130"
+            className="rounded-card h-100 w-full object-cover md:h-117.5 lg:aspect-445/520 lg:h-auto"
           />
         </picture>
 

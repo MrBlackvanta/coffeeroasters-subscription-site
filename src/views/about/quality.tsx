@@ -32,7 +32,7 @@ export default function Quality() {
         />
       </picture>
 
-      <div className="lg:grid lg:grid-cols-[540fr_445fr] lg:items-start lg:gap-x-31.25">
+      <div className="lg:grid lg:grid-cols-[540fr_125fr_445fr] lg:items-start">
         <div className="text-cream text-center lg:pt-44 lg:text-left">
           <h2 className="font-display text-h2-sm/7 md:text-h3/12 lg:text-h2">
             {quality.heading}
@@ -62,7 +62,7 @@ export default function Quality() {
             height={qualityMobile.height}
             alt=""
             loading="lazy"
-            className="rounded-card absolute top-0 left-1/2 h-39 w-69.75 -translate-x-1/2 object-cover md:h-80 md:w-143.25 lg:static lg:h-118.5 lg:w-full lg:translate-x-0"
+            className="rounded-card absolute top-0 left-1/2 h-39 w-69.75 -translate-x-1/2 object-cover md:h-80 md:w-143.25 lg:static lg:col-start-3 lg:aspect-445/474 lg:h-auto lg:w-full lg:translate-x-0"
           />
         </picture>
       </div>

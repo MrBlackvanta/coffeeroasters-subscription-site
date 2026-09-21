@@ -20,7 +20,7 @@ const socials = [
 
 export default function SiteFooter() {
   return (
-    <footer className="v-container bg-slate relative mb-18 flex flex-col items-center px-6 py-13.5 md:px-14.5 lg:mb-22 lg:flex-row lg:px-21.25 lg:py-11.75">
+    <footer className="v-container bg-slate relative mb-18 flex flex-col items-center px-6 py-13.5 md:px-14.5 lg:mb-22 lg:flex-row lg:px-10 lg:py-11.75 xl:px-21.25">
       <Logo className="h-auto w-54.5 text-white md:w-59" />
 
       <NavLinks

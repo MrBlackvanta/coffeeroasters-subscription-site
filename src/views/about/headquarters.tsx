@@ -2,7 +2,7 @@ import { headquartersHeading, offices } from "@/data";
 
 export default function Headquarters() {
   return (
-    <section className="v-container mt-30 pb-30 md:mt-36 md:pb-36 lg:mt-42 lg:px-21.25 lg:pb-42">
+    <section className="v-container lg:max-w-content mt-30 pb-30 md:mt-36 md:pb-36 lg:mt-42 lg:pb-42">
       <h2 className="font-display text-h4 text-grey text-center md:text-left">
         {headquartersHeading}
       </h2>
@@ -14,7 +14,7 @@ export default function Headquarters() {
               <Icon className="text-cyan" />
             </span>
 
-            <h3 className="font-display text-h2-sm/9 md:text-h4/9 lg:text-h3 mt-11.75 md:mt-12 lg:mt-11.25">
+            <h3 className="font-display text-h2-sm/9 md:text-h4/9 xl:text-h3 mt-11.75 md:mt-12 lg:mt-11.25">
               {country}
             </h3>
 
