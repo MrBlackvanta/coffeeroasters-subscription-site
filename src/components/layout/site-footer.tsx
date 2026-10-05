@@ -36,7 +36,7 @@ export default function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="hover:text-cyan-light focus-visible:outline-cyan-light text-cream block transition-[color]"
+              className="hover:text-peach focus-visible:outline-cyan-light text-cream block transition-[color]"
             >
               <Icon className="size-6" />
             </a>

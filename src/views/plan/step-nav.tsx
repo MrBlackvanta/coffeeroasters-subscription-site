@@ -29,7 +29,7 @@ export default function StepNav({
                 className="font-display text-h4 group flex w-full items-center text-left aria-disabled:pointer-events-none aria-disabled:opacity-20"
               >
                 <span
-                  className={`w-14.5 ${active ? "text-cyan" : "text-grey"}`}
+                  className={`w-14.5 transition-[color] ${active ? "text-cyan" : "text-grey group-hover:text-grey-on-light"}`}
                 >
                   0{index + 1}
                 </span>

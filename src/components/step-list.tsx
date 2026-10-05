@@ -18,11 +18,14 @@ const keepHyphenatedWordsWhole = (text: string) =>
 
 export default function StepList({ tone }: { tone: keyof typeof discFill }) {
   return (
-    <ol className="grid gap-y-14 md:grid-cols-3 md:gap-x-2.5 md:gap-y-0 lg:max-w-261.25 lg:gap-x-23.75">
+    <ol className="grid gap-y-14 md:grid-cols-3 md:grid-rows-[auto_auto_auto_auto] md:gap-x-2.5 md:gap-y-0 lg:max-w-261.25 lg:gap-x-23.75">
       {steps.map(({ title, description }, index) => (
-        <li key={title} className="relative text-center md:text-left">
+        <li
+          key={title}
+          className="relative text-center md:row-span-4 md:grid md:grid-rows-subgrid md:text-left"
+        >
           {index < steps.length - 1 && (
-            <span aria-hidden="true" className="v-step-rail hidden lg:block" />
+            <span aria-hidden="true" className="v-step-rail hidden md:block" />
           )}
 
           <span
