@@ -8,11 +8,11 @@ import { quality } from "@/data";
 
 export default function Quality() {
   return (
-    <section className="v-container relative isolate mt-30 px-6 pt-55 pb-15.25 md:mt-36 md:px-18.5 md:pt-96 md:pb-16.75 lg:mt-42 lg:px-21.25 lg:pt-0 lg:pb-22">
-      <div className="absolute inset-x-0 top-19.5 bottom-0 -z-10 md:top-40 lg:top-22">
+    <section className="v-container relative isolate mt-30 px-6 pt-55 pb-15.25 md:mt-36 md:px-18.5 md:pt-96 md:pb-16.75 lg:mt-42 xl:px-21.25 xl:pt-0 xl:pb-22">
+      <div className="absolute inset-x-0 top-19.5 bottom-0 -z-10 md:top-40 xl:top-22">
         <picture className="contents">
           <source
-            media="(min-width: 64rem)"
+            media="(min-width: 80rem)"
             srcSet={bgDesktop.src}
             width={bgDesktop.width}
             height={bgDesktop.height}
@@ -34,8 +34,8 @@ export default function Quality() {
         </picture>
       </div>
 
-      <div className="lg:grid lg:grid-cols-[540fr_125fr_445fr] lg:items-start">
-        <div className="text-cream text-center lg:pt-44 lg:text-left">
+      <div className="xl:grid xl:grid-cols-[540fr_125fr_445fr] xl:items-start">
+        <div className="text-cream mx-auto max-w-135 text-center xl:pt-44 xl:text-left">
           <h2 className="font-display text-h2-sm/7 md:text-h3/12 lg:text-h2">
             {quality.heading}
           </h2>
@@ -47,7 +47,7 @@ export default function Quality() {
 
         <picture className="contents">
           <source
-            media="(min-width: 64rem)"
+            media="(min-width: 80rem)"
             srcSet={qualityDesktop.src}
             width={qualityDesktop.width}
             height={qualityDesktop.height}
@@ -64,7 +64,7 @@ export default function Quality() {
             height={qualityMobile.height}
             alt=""
             loading="lazy"
-            className="rounded-card absolute top-0 left-1/2 h-39 w-69.75 -translate-x-1/2 object-cover md:h-80 md:w-143.25 lg:static lg:col-start-3 lg:size-full lg:translate-x-0"
+            className="rounded-card absolute top-0 left-1/2 h-39 w-69.75 -translate-x-1/2 object-cover md:h-80 md:w-143.25 xl:static xl:col-start-3 xl:size-full xl:translate-x-0"
           />
         </picture>
       </div>
